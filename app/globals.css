@@ -1,0 +1,60 @@
+/* @import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+
+
+
+
+/* File: app/globals.css */
+@import "tailwindcss";
+
+/* Tells the browser to use light/dark form controls and scrollbars. */
+:root {
+  color-scheme: light dark;
+}
+
+/* Animated line inside the camera viewfinder. */
+@keyframes scan-sweep {
+  0%,
+  100% {
+    top: 6%;
+  }
+  50% {
+    top: 92%;
+  }
+}
+
+.scan-line {
+  animation: scan-sweep 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scan-line {
+    animation: none;
+    top: 50%;
+  }
+}
